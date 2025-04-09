@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<!-- notes for elements that are repeated across all pages are found in this file -->
+<!-- you'll find that most of my link titles are descriptive, so that people will know what they lead to before they click on them -->
+<!-- I will often use casual language and interjections. This is a personal site and I wanted to add personal touches, hence why the fonts look handwritten. The idea is that this site looks journal-esque, kind of hand-made. -->
+
+<head> 
+
+<!-- I wanted to have a few details for the purposes of indexing and having things described accurately, only did subjects and description on the 'home page' -->
+<meta charset="UTF-8">
+<meta name="dc.title" content="Mykisib">
+<meta name="dc.creator" content="Kiera Marie Sheldon">
+<meta name="dc.resource identifier" content="">
+<meta name="dc.subject" content="Novel; original work; art; science fiction; aliens">
+<meta name="dc.description" content="Information about an unpublished science-fiction creative work. Includes a plot synopsis, genre keywords, setting and character descriptions, and a prologue.">
+<meta name="dc.publisher" content="Algonquin College">
+<meta name="dc.contributor" content="Kiera Marie Sheldon">
+<meta name="dc.date" content="2025-04-08">
+<meta name="dc.type" content="html">
+<meta name="dc.format" content="text">
+<meta name="dc.language" content="en">
+<meta name="dc.rights" content="Copyright Kiera Marie Sheldon">
+
+
+<title> Intro: Mykisib </title>
+  
+<link rel="stylesheet" href="mystyle.css" media="screen">
+<link rel="stylesheet" href="printstyle.css" media="print"> <!-- reformatted style sheet for better printing -->
+ 
+</head>
+
+
+<body class="home">
+<div id="wrapper">
+
+<header> <h1> Home Page </h1> </header>
+
+<nav role="navigation"> 
+
+<ul> 
+<li> <a href="index.html" title="General book and author information">Intro</a> </li>
+<li> <a href="setgirl.html" title="Descriptions and explanations of different settings"> Setting</a> </li>
+<li> <a href="charagirl.html" title="Character descriptions and backgrounds"> Characters</a> </li>
+<li> <a href="exgirl.html" title="Excerpt from Mykisib (I actually have some stuff written!)"> Excerpt</a> </li>
+<li> <!-- I added the search function as a list item so it will be in the same row and move with the navigation, since I intend it to be for site navigation, and it would nicely streamline the site's design -->
+
+<!-- this code was provided from another site, since I am only just starting to wrap my head around HTML. It currently does not yield results from my site, I think this is because Google still hasn't indexed it, this is a common issue. I'm keeping it because I like the idea of it, I'll see if I can make it work later --> 
+
+<form id="form" role="search"> <!-- different parts of the search bar need to hav ids so they can be formatted individually in CSS -->
+<input type="search" id="query" name="q" 
+ placeholder="search"
+ aria-label="search through site content" > <!-- placeholder is what goes in the search bar when nothing has been typed into it, aria-label lets screen readers tell users what this is used for -->
+<button> <!-- the below info is for the search symbol image that serves as the button -->
+<svg viewBox="0 0 1024 1024"> 
+<path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z">
+</path>
+</svg>
+</button>
+</form>
+
+<script> <!-- Javascript to ensure that queries that are entered into the search field will open a new tab with Google search results that have come from my webpage -->
+const f = document.getElementById('form');
+const q = document.getElementById('query');
+const google = 'https://www.google.com/search?q=site%3A+';
+const site = ''; <!-- this is the domain that google should search through, right now results yielded are typically from other github sites, I'm assuming that Google cannot find and search through mine -->
+
+function submitted(event) { event.preventDefault(); const url = google + site + '+' + q.value; const win = window.open(url, '_blank'); win.focus(); }
+
+f.addEventListener('submit', submitted); <!-- monitors if something has been submitted, so that this script will be put into action -->
+</script>
+
+</li>
+</ul>
+
+</nav>
+
+
+<article>
+
+
+<h2> Introduction! </h2>
+
+
+<section>
+
+<div class="ttl"> <!-- I wanted the heading that was the work's title to have a different font and colour, but I could not manage to change the font for this specific heading while keeping it as a heading, so it is plain text with a div ID instead -->
+Mykisib: An Unfamiliar Odyssey
+</div> <!-- for ttl div, work title -->
+
+<a href="images/bphv.png"> <img src="images/bphv.png" width="300" height="450" alt="placeholder" title="Cover art for Mykisib"> </a>
+
+<p>
+"The planet Uhust is home to Mykse-Binheso, a travelling Seer and fan of local theatre. Mykse has had a vision of vibrant worlds that exist light-years beyond his star system, and he plans to visit them. All he needs is to find the alien ship that he saw landing in the woods."
+</p>
+
+<p>
+<strong> Genres and keywords: </strong> <!-- generic terms that I figure could give people an idea of the style and themes of this work -->
+<br>
+Science-fiction, 
+Fantasy, 
+Queer Themes, 
+Introspection, 
+Religion, 
+Speculative Biology<a href="#footnote-1" title="Link to explanation in footnotes"><sup>1</sup></a>, 
+Hero’s Journey<a href="#footnote-2" title="Link to explanation in footnotes"><sup>2</sup></a>, 
+Capitalism<a href="#footnote-3" title="Link to explanation in footnotes"><sup>3</sup></a>, 
+Consumerism<a href="#footnote-4" title="Link to explanation in footnotes"><sup>4</sup></a>, 
+Classism<a href="#footnote-5" title="Link to explanation in footnotes"><sup>5</sup></a>, 
+Social Media, 
+Celebrity Culture<a href="#footnote-6" title="Link to explanation in footnotes"><sup>6</sup></a>, 
+Bodily Autonomy<a href="#footnote-7" title="Link to explanation in footnotes"><sup>7</sup></a>,
+Ableism<a href="#footnote-8" title="Link to explanation in footnotes"><sup>8</sup></a>
+</p>
+
+<p>
+This project stemmed from my interest in the alien worlds and cultures of Star Wars. I created a few original characters and ended up with several groups with their own narratives. Eventually, I abandoned the parts that were not originally mine, and <em>Mykisib</em> came into being. I wanted to create alien worlds that did not fall into the tropes of orientalism or euro-centrism, a story that celebrated and explored a diverse setting with respect and care. 
+</p>
+
+<p>
+Developing this story and setting also serves as a means for me to examine and interpret political and cultural issues that interest me. Sexuality and gender identity, the development of religions and how individuals interpret their beliefs, interpretations on the idea of biological race and how it interacts with culture, how people interact within different class and economic systems, and how worlds develop and change over time; what’s left of the past and how it influences the future. If <em>Mykisib</em> ever gains an audience, I hope that it shows them a thoughtful perspective on life on Earth through a creative, unique, and considerate lens.
+</p>
+
+</section>
+
+
+<section>
+
+<br>
+<h4> Kiera Sheldon <sup> That's me! </sup> <!-- so it looks like a silly little interjection --> </h4>
+
+<div class="Myself"> <!-- the different elements of this section have divs so that I can put them in a grid and move them around without the text wrapping or overlapping -->
+
+<div class="Mypic">
+<img src="images/sporttn.png" width="150" height="225" alt="A self portrait, featuring my head, neck, and a button-up shirt collar. I'm making a gently pleased expression, with my lips curled up slightly at the corners. I'm pale and freckled, with shoulder-length brown hair that's parted to the left, a couple piercings in my right ear, and round brown-green eyes." title="Portrait of myself, &copy;Copyright Kiera Marie Sheldon 2025">
+</div> <!-- for mypic, the self portrait -->
+
+<table class="socials">
+<caption> <strong> Reach me! Check me out! </strong> </caption> <!-- hoping this caption describes my intention when putting links to social media, for contacting me and seeing my other work -->
+<tbody> <!-- Only one account linked for now, I don't have any other public ones and I don't intend to change that right now. I've coded it so that headings and corresponding items will be next to each other instead of on top and underneath, makes this table appear like a list, of sorts -->
+<tr> <th> Tumblr: </th>  <td> <a href="https://www.tumblr.com/here-for-a-good-time-only?source=share" title="my art tumblr">[at]here_for_a_good_time_only</a> </td> </tr>
+</tbody>
+</table>
+</div> <!-- for socials, the social media table -->
+
+<div class="Aboutme">
+<p>
+I am frequently caught in the midst of a dilemma: I want to learn, but I refuse to read. As a result, I spend a lot of my time pondering and mulling thoughts over instead of finding answers. Developing this work serves as my outlet.
+</p>
+
+<p>
+While I do take inspiration from some media, there are many works in my favourite genres that I have not seen or read, so I constantly fear that I am accidentally reinventing the wheel. What I’m doing may have been done before, better than I could ever hope to achieve, and I could be completely unaware. Luckily, this is a hobby for my own amusement. It can be as unoriginal or unnecessarily complicated as I care to make it.
+</p>
+</div> <!-- for Aboutme -->
+
+</section>
+
+
+<section>
+
+<h3> Footnotes </h3>
+
+<p id="footnote-1">
+<sup>1</sup> 
+<a href="https://speculativeevolution.fandom.com/wiki/Speculative_Biology" title="Speculative Biology from the Speculative Evolution Wiki">This</a> is a link to the Speculative Evolution Wiki, which has a brief explanation of speculative biology, its history, and examples of works in the genre. 
+</p>
+
+<p id="footnote-2">
+<sup>2</sup> 
+<a href="https://www.grammarly.com/blog/literary-devices/heros-journey/" title="Grammarly.com on the Hero's Journey">This</a> is a link to a blog post from Grammarly.com that describe's what the Hero's Journey is.
+</p>
+
+<p id="footnote-3">
+<sup>3</sup> 
+<a href="https://www.merriam-webster.com/dictionary/capitalism" title="Definition of Capitalism">This</a> is a link to the Merriam-Webster definition of capitalism.
+</p>
+
+<p id="footnote-4">
+<sup>4</sup> 
+<a href="https://www.investopedia.com/terms/c/consumerism.asp" title="Consumerism: Definition, Economic Impact, Pros & Cons">This</a> is a link to an article from Investopedia describing and investigating consumerism.
+</p> 
+
+<p id="footnote-5">
+<sup>5</sup> 
+<a href="https://www.britannica.com/topic/classism" title="Classism, Encyclopedia Britannica">This</a> is a link to the article about classism on Britannica.com, which gives a description and an explanation of different philosophical views on classism and class-based societies.
+</p>
+
+<p id="footnote-6">
+<sup>6</sup>
+<a href="" title="The Culture of Celebrity by Steven Mintz">This</a> is a link to an article from Inside Higher Ed that examines celebrity culture, the relationships between famous and non-famous individuals, how celebrity images are constructed, and the way Western culture views and treats celebrities.
+</p>
+
+<p id="footnote-7">
+<sup>7</sup> 
+<a href="https://en.wikipedia.org/wiki/Bodily_integrity" title="Bodily integrity from Wikipedia">This</a> is a link to the wikipedia article on bodily integrity, which coincides directly with personal autonomy and control and ownership of one's own body.
+</p>
+
+<p id="footnote-8">
+<sup>8</sup> 
+<a href="https://accessliving.org/newsroom/blog/ableism-101/" title="Ableism 101 by Ashledy Eisenmenger">This</a> is a link to an article from Access Living that briefly describes ableism and the ways it can appear in everyday life.
+</p>
+
+
+</section>
+
+
+
+</article>
+
+
+
+<footer> 
+<!-- It's kind of long, but this is all information that does not serve the main purpose of the site (talking about Mykisib). Kind of like a mini about page at the bottom of every page, I didn't feel like it was enough content to warrant its own page -->
+ 
+<address> <a href="mailto:shel0108@algonquinlive.com" title="Should open a mailing app"> Send me an email</a> <br> My email is shel0108 [at] algonquinlive.com </address>  
+<br>
+&copy;Copyright Kiera Marie Sheldon 2025 
+<br>
+<br>
+
+<div class="fontlist"> <!-- so I can change the font for this section, the impact font can be harder to read when there's more words -->
+<p>
+OTF & TTF fonts used on this page: <!-- I personally think it's very important to credit artists, and I like fonts so it would be nice if every site with fun fonts did this -->
+
+<dl> <!-- Making the font list a description list so the font names and licensing information are staggered and well-organised -->
+
+<dt>Beth Ellen 2</dt>
+<dd>Copyright&copy; 2018, Rob Jelinski Studios,llc. Licensed under the SIL Open Font License, Version 1.1.</dd>
+
+<dt>VAG-HandWritten</dt>
+<dd>Copyright&copy; 2006 Vangelis Makridakis. Licensed under the GNU General Public License, Version 2.</dd>
+
+<dt>Impact Label Reversed</dt>
+<dd>Copyright&copy; 2008 Tension Type. Licensed under the Tension Type Font License.</dd>
+
+<dt>Caroni</dt>
+<dd>Copyright&copy; 2018 Franzi Draws. Licensed under the SIL Open Font License, Version 1.1.</dd>
+</dl>
+
+</p>
+</div> <!-- for font list -->
+
+Visual elements for this site were created using Canva <!-- so people who like them know to use Canva for their own work -->
+<br>
+Last site update: 2025-04-08 <!-- I like to know how up-to-date site content is, so I want my site to have this for others -->
+
+</footer>
+
+
+</div>     <!-- closing tag for the div wrapper -->
+
+
+</body>
+
+
+</html> 

@@ -1,0 +1,206 @@
+/* Mykisib Print CSS File */
+/* This is the print version of the site. All my comments from the other document are still here. */
+
+
+@font-face {font-family: 'beth';
+			  src: url(Beth-Ellen-2.0.otf);
+			  font-weight: normal;
+			  font-style: normal; }
+
+@font-face {font-family: 'hand';
+			  src: url(VAG-HandWritten.otf);
+			  font-weight: normal;
+			  font-style: normal; }
+
+@font-face {font-family: 'car'; 
+            src: url(Caroni-Regular.otf);
+            font-weight: normal;
+            font-style: normal; }
+
+@font-face {font-family: 'imp'; 
+            src: url(Impact_Label_Reversed.ttf);
+            font-weight: normal;
+            font-style: normal; }
+
+
+body { font-family: 'car', verdana, arial, sans-serif;
+       font-size:25pt;
+       color: black;
+       line-height:1.5;
+       margin: 5px 10px;
+       padding: 5px;
+       background: #5f9ef0; }
+
+
+footer, nav { font-family: 'imp', georgia, serif;
+	      font-size: 20pt; 
+	      color: darkslateblue; }
+
+
+h1, h2, h3, h4, h5, h6 { font-family: 'hand', "Brush Script MT", cursive; } 
+/* I really wanted to use this font, but it can be hard to read for large blocks of text. Hence why I've used it for headings */
+
+h1 { font-size: 200%; }
+
+h2 { font-size: 150%; 
+     color: darkslateblue; }
+
+h1, h2, h3, h4, ol, ul, table { margin: 5px 10px 5px; }
+
+
+p { margin: 2px 15px 15px; }
+
+
+nav { display: none;
+      text-align: left; /* text on the left, so the search bar has space to go on the right */
+      position: sticky; /* so the nav bar will stay at the top of the page as users scroll */
+      top: 0; 
+      padding: 2px;
+      margin: 0px;
+      background: transparent url(images/navb.png) no-repeat; }
+
+/* the form, input, button, and svg elements are part of the search bar in navigation */
+
+/* below is for the general style and shape of the search bar */
+form { background-color: transparent;
+       width: 150px;
+       height: 25px;
+       border: 0px solid mediumslateblue; /* leaving the size and colour here so I can change it if i decide I want it to have a border */
+       border-radius: 5px; /* curve of the border corners */
+       display: flex;
+       flex-direction: row; /* puts the search field and button next to eachother */
+       align-items: center;
+       float: right; } /* so it remains to the right of the nav bar */
+
+/* below is for text in the search field */
+input { all: unset;
+        font: 20pt 'imp', georgia, serif;
+        color: deeppink;
+        height: 100%;
+        width: 100%;
+        padding: 6px 10px; } 
+
+button { all: unset; /* so the browser does not add its own formatting */
+         cursor: pointer;
+         width: 44px;
+         height: 44px; }
+
+/* below is for the image on the button */
+svg { color: mediumslateblue;
+      fill: currentColor;
+      width: 24px;
+      height: 24px;
+      padding: 10px; }
+
+
+li { display: inline; /* so the links in the nav list are next to eachother on the same line */
+     padding: 10px; }
+
+
+dl { margin: 2px 10px; }
+dt { margin-top: 5px; }
+dd { margin-bottom: 10px; }
+
+
+caption, th, td { text-align: left; } /* makes the table that I made look like a list (socials on index.html) look nicer, I like having text along the left margin */
+
+
+abbr { text-decoration-color: mediumslateblue;
+       text-decoration-style: solid; } /* brings more attention to the words with this tag, users more likely to either try to click on them or hover over them */
+
+
+img { padding: 5px;
+      border: 2px solid mediumslateblue;
+      background-color: white;
+      margin: 5px 10px; }
+
+img { float: left; } /* mainly so the cover image and text on the main page will be next to eachother, it works without me needing to assign them divs so I'm leaving it since the other images are all individually formatted */
+
+
+a { color: deeppink;
+    font-weight: bold;
+    text-decoration: none; }
+
+a:visited { color: mediumslateblue; }
+
+a:hover, a:focus, a:active { background-color: #ffde59; border-bottom-color: white; margin: auto; }
+
+
+div#wrapper { width: 728px;
+	      margin-left: auto;
+	      margin-right: auto;
+	      margin-top: 10px;
+	      margin-bottom: 10px;
+	      background-color: #d8eff3;
+	      border: 4px solid mediumslateblue; }
+
+
+header { height: 110px; margin-bottom: 10px; }
+
+header { background: #d8eff3 }
+
+
+footer { margin: 5px 5px;
+         background: #d8eff3; 
+	 padding: 5px 50px; }
+
+address { font-style: normal; } /* to un-italicize the text */
+
+
+
+/* styling for list of fonts in footer */
+
+.fontlist { font-family: 'car', verdana, arial, sans-serif;
+            font-size:25pt; }  /* same as body text, for easier reading */
+
+
+
+/* Many of the sections below are so I can put different divisions of page sections into a grid. The grid function allows me to move around an element within a specific square of the grid on the page. The elements in a grid will not overlap or wrap around each other, since they each have their own section of the grid that they do not extend past. Justify moves items right and left, align moves them up and down (inline and block directions). */
+
+/* styling for intro page */
+
+.ttl { font-family: 'beth', "Brush Script MT", cursive;
+       color: Deeppink;
+       margin: 10px;
+       padding: 5px; } /* wanted this header to stand out since it was the title of the work */
+
+.Myself { display: grid;
+          align-items: start; /* they will be aligned with the top of the grid cell */
+          grid-template-columns: 1fr 1fr 1fr;
+          column-gap: 5px; }
+
+.Mypic { justify-self: center; } /* centered, not against the right or left sides of the grid cell */
+
+.socials { grid-column-start: 2; grid-column-end: 4; /* the cell for this section will extend across multiple spaces, making it wider */
+           align-self: center; } /* centered, not along the top or the bottom of the cell */
+
+
+
+/* styling for character page, each character section has its own grid */
+
+
+.Mykse, .Miko, .NMcrew, .B7crew { display: grid;
+                                  align-items: start;
+                                  grid-template-columns: 1fr 1fr 1fr;
+                                  column-gap: 5px; }
+
+.NMcrew, .B7crew { grid-auto-rows: 255px; } /* determines the height of the row, same as the image, the cell won't change in height with its content and push down the accompanying text underneath that is not part of the grid */
+
+.mi, .mii, .nmci, .b7ci { grid-column-start: 1; grid-column-end: 2; 
+                          justify-self: center; } /* centered in the cell, not to the left or right */
+
+.mb, .mib, .nmcl, .b7cl { grid-column-start: 2; grid-column-end: 4; } /* making their grid cells wider */
+
+.nmcl, .b7cl { column-count: 3; /* so the text appears in columns instead of in one long vertical list, makes it fit in the cell */
+               align-self: center; } /* centered in the cell, not to the top or bottom */
+
+
+
+/* styling for excerpts page, so that the portion with the work's text does not have the interesting styling of the rest of the site, easier to read */
+
+div#prologue { margin: 10px 10px;
+               background-color: white; 
+	       padding: 8px; 
+               font-family: verdana, arial, sans-serif;
+               font-size:15pt;
+               color: black; }
