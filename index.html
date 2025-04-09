@@ -62,7 +62,7 @@
 const f = document.getElementById('form');
 const q = document.getElementById('query');
 const google = 'https://www.google.com/search?q=site%3A+';
-const site = ''; <!-- this is the domain that google should search through, right now results yielded are typically from other github sites, I'm assuming that Google cannot find and search through mine -->
+const site = 'https://kkshel.github.io/Mykisib/'; <!-- this is the domain that google should search through, right now results yielded are typically from other github sites, I'm assuming that Google cannot find and search through mine -->
 
 function submitted(event) { event.preventDefault(); const url = google + site + '+' + q.value; const win = window.open(url, '_blank'); win.focus(); }
 
